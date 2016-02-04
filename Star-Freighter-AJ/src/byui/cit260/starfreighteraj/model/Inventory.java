@@ -17,7 +17,6 @@ public class Inventory implements Serializable{
     private String inventoryType;
     private int quantityInStock;
     private int requiredAmount;
-    private double spaceCredits;
 
     public Inventory() {
     }
@@ -46,27 +45,18 @@ public class Inventory implements Serializable{
         this.requiredAmount = requiredAmount;
     }
 
-    public double getSpaceCredits() {
-        return spaceCredits;
-    }
-
-    public void setSpaceCredits(double spaceCredits) {
-        this.spaceCredits = spaceCredits;
-    }
-
     @Override
     public int hashCode() {
         int hash = 5;
         hash = 31 * hash + Objects.hashCode(this.inventoryType);
         hash = 31 * hash + this.quantityInStock;
         hash = 31 * hash + this.requiredAmount;
-        hash = 31 * hash + (int) (Double.doubleToLongBits(this.spaceCredits) ^ (Double.doubleToLongBits(this.spaceCredits) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Inventory{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + ", spaceCredits=" + spaceCredits + '}';
+        return "Inventory{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", requiredAmount=" + requiredAmount + '}';
     }
     
     @Override
@@ -85,9 +75,6 @@ public class Inventory implements Serializable{
             return false;
         }
         if (this.requiredAmount != other.requiredAmount) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.spaceCredits) != Double.doubleToLongBits(other.spaceCredits)) {
             return false;
         }
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {

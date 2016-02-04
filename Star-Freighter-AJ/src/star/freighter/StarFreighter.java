@@ -71,7 +71,6 @@ public class StarFreighter {
         inventoryOne.setInventoryType("Weapon");
         inventoryOne.setQuantityInStock(65);
         inventoryOne.setRequiredAmount(1);
-        inventoryOne.setSpaceCredits(975.00);
         
         String inventoryInfo = inventoryOne.toString();
         System.out.println(inventoryInfo);
