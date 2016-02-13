@@ -7,8 +7,22 @@ package byui.cit260.starfreighteraj.control;
 
 /**
  *
- * @author AlecSir
+ * @author JeffJones
  */
 public class ShipUpgradeControl {
-    
+
+    /**
+     *
+     * @param product
+     * @return
+     */
+    public boolean checkProducts(double product){
+        
+        if (product > 20 || product < 30) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
