@@ -18,11 +18,22 @@ public class ShipUpgradeControl {
      */
     public boolean checkProducts(double product){
         
-        if (product > 20 || product < 30) {
+        if (product >= 20 && product <= 30) {
             return true;
         }
         else {
             return false;
         }
+    }
+
+  
+    public boolean calcWarpDrive(double warp){
+
+        if (warp >= 10 && warp <= 50){
+            return true;
+        }
+        else {
+            return false;
+        }    
     }
 }
