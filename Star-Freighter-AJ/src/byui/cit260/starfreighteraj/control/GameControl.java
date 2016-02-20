@@ -5,10 +5,27 @@
  */
 package byui.cit260.starfreighteraj.control;
 
+import byui.cit260.starfreighteraj.model.Player;
+import star.freighter.aj.StarFreighterAJ;
+
 /**
  *
  * @author AlecSir
  */
 public class GameControl {
+
+    public static Player createPlayer(String name) {
+        
+        if (name == null) {
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        StarFreighterAJ.setPlayer(player);
+        
+        return player;
+    }
     
 }
