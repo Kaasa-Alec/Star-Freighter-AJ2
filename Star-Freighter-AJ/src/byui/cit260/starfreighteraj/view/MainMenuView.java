@@ -24,7 +24,7 @@ public class MainMenuView
                   + "\n-------------------------------------------"
                   + "\n| Main Menu                               |"
                   + "\n-------------------------------------------"
-                  + "\nG - Start new game"
+                  + "\nN - Start new game"
                   + "\nL - Load and start saved game"
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"
@@ -75,7 +75,7 @@ public class MainMenuView
         menuOption = menuOption.toUpperCase();
         
         switch (menuOption) {
-            case "G":
+            case "N":
                 this.startNewGame();
                 break;
             case "L":
