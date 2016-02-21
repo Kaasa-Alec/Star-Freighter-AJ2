@@ -70,7 +70,7 @@ public class MainMenuView
         return value;
     }
 
-    public boolean doAction(String menuOption) {
+    private boolean doAction(String menuOption) {
         
         menuOption = menuOption.toUpperCase();
         
@@ -91,7 +91,7 @@ public class MainMenuView
                 System.out.println("\n*** Invalid selection *** Try again");
         }
         
-        return false;
+        return true;
     }
 
     private void startNewGame() {
