@@ -68,7 +68,7 @@ private String helpMenu;
         return value;
     }
 
-    public boolean doAction(String helpMenuOption) {
+    private boolean doAction(String helpMenuOption) {
         
         helpMenuOption = helpMenuOption.toUpperCase();
         
@@ -92,7 +92,7 @@ private String helpMenu;
                 System.out.println("\n*** Invalid selection *** Try again");
         }
         
-        return false;
+        return true;
     }
 
     private void displayInfoScreen() {
