@@ -28,7 +28,7 @@ public class MainMenuView
                   + "\nL - Load and start saved game"
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"
-                  + "\nE - Exit game"
+                  + "\nQ - Quit game"
                   + "\n--------------------------------------------";
     }
     
@@ -39,7 +39,7 @@ public class MainMenuView
         do {
             
             String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("E"))
+            if (menuOption.toUpperCase().equals("Q"))
                 return;
             
             done = this.doAction(menuOption);
@@ -49,6 +49,7 @@ public class MainMenuView
     }
 
     private String getMenuOption() {
+        
         Scanner keyboard = new Scanner(System.in);
         String value = ""; 
         boolean valid = false;
@@ -70,7 +71,7 @@ public class MainMenuView
         return value;
     }
 
-    private boolean doAction(String menuOption) {
+    public boolean doAction(String menuOption) {
         
         menuOption = menuOption.toUpperCase();
         
@@ -89,9 +90,10 @@ public class MainMenuView
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
+                break;
         }
         
-        return true;
+        return false;
     }
 
     private void startNewGame() {
