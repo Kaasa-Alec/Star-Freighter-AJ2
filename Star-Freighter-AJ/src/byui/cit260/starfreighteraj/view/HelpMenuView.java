@@ -38,7 +38,10 @@ private String helpMenu;
             
             String helpMenuOption = this.getHelpMenuOption();
             if (helpMenuOption.toUpperCase().equals("B"))
-                this.displayMainMenuView();
+            //    this.displayMainMenuView();  // This hands over control to displayMainMenuView, but only temporarily.
+//  Instead you want to hand over the control without it being handed back, if an invalid key is pressed in the main menu.
+//  A "return" will do that just fine.
+               return;
             
             done = this.doAction(helpMenuOption);
             
@@ -71,7 +74,7 @@ private String helpMenu;
     public boolean doAction(String helpMenuOption) {
         
         helpMenuOption = helpMenuOption.toUpperCase();
-        
+        boolean valid = true;
         switch (helpMenuOption) {
             case "G":
                 this.displayInfoScreen();
@@ -90,6 +93,7 @@ private String helpMenu;
                 break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
+                valid = false; // HERE WAS THE PROBLEM, WATCH OUT IN FUTURE
                 break;
         }
         

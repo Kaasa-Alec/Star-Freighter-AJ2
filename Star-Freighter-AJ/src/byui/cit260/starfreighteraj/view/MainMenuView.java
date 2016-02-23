@@ -88,6 +88,11 @@ public class MainMenuView
             case "S":
                 this.saveGame();
                 break;
+// There was no Q - "Quit game" set up in your MainMenuView so it was passing to the default, which is why
+// it was returning to the HelpMenuView.  This also will allow the game to break from this menu.
+            case "Q":
+                break; //I dunno if this was the real problem, because there's 
+                // the bit above in the displayMainMenu function, but maybe we should include it to be safe from now on.
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -118,9 +123,3 @@ public class MainMenuView
     }
 
 }
-
-    
-    
-
-
-  
