@@ -15,8 +15,7 @@ import star.freighter.aj.StarFreighterAJ;
  *
  * @author JeffJones
  */
-public class MainMenuView 
-{
+public class MainMenuView {
     private String menu;
 
     public MainMenuView() {
