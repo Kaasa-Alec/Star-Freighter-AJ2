@@ -5,10 +5,16 @@
  */
 package byui.cit260.starfreighteraj.control;
 
+import byui.cit260.starfreighteraj.model.Player;
+
 /**
  *
  * @author AlecSir
  */
 public class ShopControl {
+
+    public static void createNewShop(Player player) {
+        System.out.println("*** createNewShop function called ***");
+    }
     
 }
