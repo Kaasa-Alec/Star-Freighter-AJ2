@@ -25,6 +25,7 @@ public class MainMenuView {
                   + "\n-------------------------------------------"
                   + "\nN - Start new game"
                   + "\nL - Load and start saved game"
+                  + "\nG - Game menu"
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"
                   + "\nQ - Quit game"
@@ -81,6 +82,9 @@ public class MainMenuView {
             case "L":
                 this.startExistingGame();
                 break;
+            case "G":
+                this.displayGameMenu();
+                break;
             case "H":
                 this.displayHelpMenu();
                 break;
@@ -103,13 +107,18 @@ public class MainMenuView {
     private void startNewGame() {
         GameControl.createNewGame(StarFreighterAJ.getPlayer());
         
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
     }
 
     private void startExistingGame() {
         System.out.println("*** startExistingGame function called ***");
 
+    }
+    
+    private void displayGameMenu() {
+        GameMenuView gameMenuView = new GameMenuView();
+        
+        gameMenuView.displayGameMenuView();
+        
     }
 
     private void displayHelpMenu() {
