@@ -29,6 +29,7 @@ public class MainMenuView {
                   + "\nH - Get help on how to play the game"
                   + "\nS - Save game"
                   + "\nQ - Quit game"
+                  + "\nT - TEST - ShipNameView"
                   + "\n--------------------------------------------";
     }
     
@@ -96,6 +97,9 @@ public class MainMenuView {
             case "Q":
                 break; //I dunno if this was the real problem, because there's 
                 // the bit above in the displayMainMenu function, but maybe we should include it to be safe from now on.
+            case "T": //TEMPORARY FOR TESTING
+                this.displayShipNameView();
+                break;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
@@ -128,6 +132,13 @@ public class MainMenuView {
     }
     private void saveGame() {
         System.out.println("*** saveGame function called ***");
+    }
+
+    //TEMPORARY FOR TESTING
+    private void displayShipNameView() {
+        ShipNameView shipNameView = new ShipNameView();
+        
+        shipNameView.displayShipNameView();
     }
 
 }
