@@ -94,6 +94,10 @@ public class ShipNameView {
             return false;
         }
         
+        if (shipsName.toUpperCase().equals("ENTERPRISE")) {
+                this.displayNextViewEnterprise();
+        }
+        else
         this.displayNextView(ship);
     
         
@@ -101,25 +105,49 @@ public class ShipNameView {
         
     }
 
-    private void displayNextView(ShipModel ship) {
+    private void displayNextViewEnterprise() {
                 
                 System.out.println(
                          "\n************************************************"
+                       + "\n*                                              *"
+                       + "\n* 'Enterprise,' huh? How original. Did you     *"
+                       + "\n* think of that all on your own? I bet you're  *" 
+                       + "\n* feelin' reeeeaaaally proud of yourself,      *"
+                       + "\n* aren't you?                                  *"
+                       + "\n*                                              *"
+                       + "\n* Alright, whatever. In any case, the ship's   *"
+                       + "\n* all done, and now all that remains is to     *"
+                       + "\n* have one last look around the place and make *"
+                       + "\n* sure that we have everything we need. We     *"
+                       + "\n* wouldn't want to run out of air or food in   *"
+                       + "\n* space. And we certainly wouldn't want to be  *"
+                       + "\n* caught off-guard if pirates show up. Take    *"
+                       + "\n* another look before we shove off and let's   *"
+                       + "\n* get under way, captain!                      *"
+                       + "\n*                                              *"
+                       + "\n************************************************"
+                       );
+        
+        MainMenuView mainMenuView = new MainMenuView();
+        
+        mainMenuView.displayMainMenuView();
+    }
+
+    private void displayNextView(ShipModel ship) {
+        System.out.println(
+                         "\n************************************************"
                        + "\n                                                "
-                       + "\n '" + ship.getName() + "' huh? How original.    "
-                       + "\n Did you think of that all on your own? I bet   " 
-                       + "\n you're feelin' reeeeaaaally proud of yourself, "
-                       + "\n aren't you?                                    "
-                       + "\n                                                "
-                       + "\n Alright, whatever. In any case, the ship's     "
-                       + "\n all done, and now all that remains is to       "
+                       + "\n Wow, '" + ship.getName() + "' is an awesome    "
+                       + "\n name! People everywhere will empty their       "
+                       + "\n wallets whenever they hear it! Now that        "
+                       + "\n we are all done, all that remains is to        "
                        + "\n have one last look around the place and make   "
                        + "\n sure that we have everything we need. We       "
                        + "\n wouldn't want to run out of air or food in     "
                        + "\n space. And we certainly wouldn't want to be    "
-                       + "\n caught with our pants down if pirates show     "
-                       + "\n up. Take another look before we shove off,     "
-                       + "\n and let's get under way, captain!              "
+                       + "\n caught off-guard if pirates show up. Take      "
+                       + "\n another look before we shove off and let's get "
+                       + "\n under way, captain!                            "
                        + "\n                                                "
                        + "\n************************************************"
                        );
