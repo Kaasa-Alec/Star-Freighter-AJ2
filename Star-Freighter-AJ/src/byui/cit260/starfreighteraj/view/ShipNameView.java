@@ -82,8 +82,8 @@ public class ShipNameView {
     private boolean doAction(String shipsName) {
         
         if (shipsName.length() < 2) {
-            System.out.println("\nInvalid ship name:"
-                    + "The name must be greater than one character in length");
+            System.out.println("\nInvalid ship name: The name must be greater "
+                    + "than one character in length");
         return false;
         }
         
