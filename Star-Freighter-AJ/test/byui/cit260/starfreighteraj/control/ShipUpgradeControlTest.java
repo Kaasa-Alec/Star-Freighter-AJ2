@@ -31,7 +31,7 @@ public class ShipUpgradeControlTest {
         System.out.println("\tTest case #1");
         
         // input value for test case 1
-        double product = 25.0;
+        double product = 21.0;
         
         boolean expResult = true; // expected output returned value
 
@@ -44,10 +44,89 @@ public class ShipUpgradeControlTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result);
         
+        System.out.println("checkProducts");
+        
+        /*************************
+         * Test case #2
+         ************************/
+        System.out.println("\tTest case #2");
+        
+        // input value for test case 1
+        product = 29.0;
+        
+        expResult = true; // expected output returned value
+
+        // call function to run test
+        result = instance.checkProducts(product);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result);
         
         
+        /*************************
+         * Test case #3
+         ************************/
+        System.out.println("\tTest case #3");
         
-       
+        // input value for test case 1
+        product = 19.0;
+        
+        expResult = false; // expected output returned value
+
+        // call function to run test
+        result = instance.checkProducts(product);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result);
+        
+        /*************************
+         * Test case #4
+         ************************/
+        System.out.println("\tTest case #4");
+        
+        // input value for test case 1
+        product = 31.0;
+        
+        expResult = false; // expected output returned value
+
+        // call function to run test
+        result = instance.checkProducts(product);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result);
+        
+         /*************************
+         * Test case #5
+         ************************/
+        System.out.println("\tTest case #5");
+        
+        // input value for test case 1
+        product = 20.0;
+        
+        expResult = true; // expected output returned value
+
+        // call function to run test
+        result = instance.checkProducts(product);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result);
+        
+        /*************************
+         * Test case #6
+         ************************/
+        System.out.println("\tTest case #6");
+        
+        // input value for test case 1
+        product = 30.0;
+        
+        expResult = true; // expected output returned value
+
+        // call function to run test
+        result = instance.checkProducts(product);
+        
+        // compare expected return value with actual value returned
+        assertEquals(expResult, result);
+        
     }
 
     /**
