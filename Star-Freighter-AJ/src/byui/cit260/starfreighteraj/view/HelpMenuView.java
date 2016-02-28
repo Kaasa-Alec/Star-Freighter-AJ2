@@ -13,10 +13,11 @@ import java.util.Scanner;
  */
 public class HelpMenuView {
     
-
+// Declaring the helpMenu variable
 private String helpMenu;
 
     public HelpMenuView() {
+        // Assigning value to the helpMenu variable
         this.helpMenu = "\n"
                   + "\n-------------------------------------------"
                   + "\n| Help Menu                               |"
@@ -55,7 +56,8 @@ private String helpMenu;
         boolean valid = false;
         
         while (!valid) {
-            System.out.println("\n" + this.helpMenu);
+            // Calling the helpMenu variable, copying its value and displaying it to the user
+            System.out.println("\n" + this.helpMenu); 
             
             value = keyboard.nextLine();
             value = value.trim();
