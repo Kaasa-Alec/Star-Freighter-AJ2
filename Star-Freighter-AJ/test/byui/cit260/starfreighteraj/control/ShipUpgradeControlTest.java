@@ -50,7 +50,7 @@ public class ShipUpgradeControlTest {
          ************************/
         System.out.println("\tTest case #2");
         
-        // input value for test case 1
+        // input value for test case 2
         product = 29.0;
         
         expResult = true; // expected output returned value
@@ -67,7 +67,7 @@ public class ShipUpgradeControlTest {
          ************************/
         System.out.println("\tTest case #3");
         
-        // input value for test case 1
+        // input value for test case 3
         product = 19.0;
         
         expResult = false; // expected output returned value
@@ -83,7 +83,7 @@ public class ShipUpgradeControlTest {
          ************************/
         System.out.println("\tTest case #4");
         
-        // input value for test case 1
+        // input value for test case 4
         product = 31.0;
         
         expResult = false; // expected output returned value
@@ -99,7 +99,7 @@ public class ShipUpgradeControlTest {
          ************************/
         System.out.println("\tTest case #5");
         
-        // input value for test case 1
+        // input value for test case 5
         product = 20.0;
         
         expResult = true; // expected output returned value
@@ -115,7 +115,7 @@ public class ShipUpgradeControlTest {
          ************************/
         System.out.println("\tTest case #6");
         
-        // input value for test case 1
+        // input value for test case 6
         product = 30.0;
         
         expResult = true; // expected output returned value
