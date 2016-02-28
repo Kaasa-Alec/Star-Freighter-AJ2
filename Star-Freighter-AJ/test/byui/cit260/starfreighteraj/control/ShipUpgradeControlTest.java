@@ -44,7 +44,6 @@ public class ShipUpgradeControlTest {
         // compare expected return value with actual value returned
         assertEquals(expResult, result);
         
-        System.out.println("checkProducts");
         
         /*************************
          * Test case #2
