@@ -7,6 +7,7 @@ package byui.cit260.starfreighteraj.control;
 
 import byui.cit260.starfreighteraj.model.Player;
 import byui.cit260.starfreighteraj.model.ShipModel;
+import byui.cit260.starfreighteraj.view.GameMenuView;
 import star.freighter.aj.StarFreighterAJ;
 
 /**
@@ -30,7 +31,9 @@ public class GameControl {
     }
 
     public static void createNewGame(Player player) {
-        System.out.println("*** createNewGame function called ***");
+        GameMenuView gameMenuView = new GameMenuView();
+        
+        gameMenuView.displayGameMenuView();
     }
 
     public static ShipModel createShip(String name) {
